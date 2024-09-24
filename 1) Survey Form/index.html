@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header class="header">
+        <h1 id="title">Why freeCodeCamp?</h1>
+        <p id="description"><em>Help Us Learn About Your Aspirations</em></p>
+    </header>
+    <form method="post" id="survey-form" class="form-control">
+        <label for="name">Name<input id="name" type="text" required placeholder="Enter your name">
+        </label>
+        <label for="surname">Surname<input id="surname" type="text" required placeholder="Enter your surname"></label>
+        <label for="email">Email<input id="email" type="email" required placeholder="Enter your email"></label>
+        <label for="age">Age (not required) <input id="age" type="number" min="1" placeholder="Age"></label>
+        <fieldset>
+            <legend>1) Why did you decide to start a course on freeCodeCamp? (Select all that apply)</legend>
+            <label for="new-skills"><input type="checkbox" name="why" value="new-skills" id="new-skills">To gain new
+                professional skills</label>
+            <label for="career"><input type="checkbox" name="why" value="career" id="career">To change career</label>
+            <label for="improve"><input type="checkbox" name="why" value="improve" id="improve"> To improve my technical
+                skills</label>
+            <label for="passion"><input type="checkbox" name="why" value="passion" id="passion"> For my passion for
+                coding</label>
+            <label for="certification"><input type="checkbox" name="why" value="certification" id="certification"> To
+                earn a certification</label>
+            <label for="why-other"><input type="checkbox" name="why" value="why-other" id="why-other"> Other (please
+                specify):</label> <label><input type="text" name="other-why" id="other-why"></label>
+        </fieldset>
+        <fieldset>
+            <legend>2) What goal do you hope to achieve by completing the course? (Select all that apply)</legend>
+            <label for="job"><input type="checkbox" name="goal" value="job" id="job">Find a job in programming</label>
+            <label for="career-advance"><input type="checkbox" name="goal" value="career-advance"
+                    id="career-advance">Advance in my current career</label>
+            <label for="project"><input type="checkbox" name="goal" value="project" id="project"> Build personal
+                projects</label>
+            <label for="collaboration"><input type="checkbox" name="goal" value="collaboration" id="collaboration">
+                Collaborate with other developers</label>
+            <label for="problem-solving"><input type="checkbox" name="goal" value="problem-solving"
+                    id="problem-solving"> Improve my problem-solving skills</label>
+            <label for="goal-other"><input type="checkbox" name="goal" value="goal-other" id="goal-other"> Other (please
+                specify): </label> <label><input type="text" name="other-goal" id="other-goal"></label>
+        </fieldset>
+        <label for="like">3) Which part of the course did you enjoy the most?
+            <select name="like" id="like">
+                <option disabled selected value> Select one</option>
+                <option value="1">Responsive Web Design</option>
+                <option value="2">JavaScript Algorithms and Data Structures (Beta)</option>
+                <option value="3">Front End Development Libraries</option>
+                <option value="4">Data Visualization</option>
+                <option value="5">Relational Database</option>
+                <option value="6">Back End Development and APIs</option>
+                <option value="7">Quality Assurance</option>
+                <option value="8">Scientific Computing with Python (Beta)</option>
+                <option value="9">Data Analysis with Python</option>
+                <option value="10">Information Security</option>
+                <option value="11">Machine Learning with Python</option>
+                <option value="12">College Algebra with Python</option>
+            </select>
+        </label>
+        <label for="time">4) How much time do you dedicate to studying on freeCodeCamp each week?
+            <select name="time" id="time">
+                <option disabled selected value>Select one</option>
+                <option value="1">Less than 5 hours</option>
+                <option value="2">5-10 hours</option>
+                <option value="3">10-20 hours</option>
+                <option value="4">More than 20 hours</option>
+            </select>
+        </label>
+        <fieldset>
+            <legend>5) How would you describe your learning experience on freeCodeCamp so far? </legend>
+            <div id="opinion"><p>Very positive</p>
+                <label for="very-pos" class="inline"><input type="radio" name="opinion" value="verypos" id="very-pos"
+                        class="inline"></label>
+                <label for="pos" class="inline"><input type="radio" name="opinion" value="pos" id="pos"></label>
+                <label for="neu" class="inline"><input type="radio" name="opinion" value="neu" id="neu"></label>
+                <label for="neg" class="inline"><input type="radio" name="opinion" value="neg" id="neg"></label>
+                <label for="veryneg" class="inline"><input type="radio" name="opinion" value="veryneg"
+                        id="veryneg"></label>
+                <p id="end">Very Negative</p>
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Do you have any suggestions to improve the learning experience on freeCodeCamp?</legend>
+            <textarea name="bio" id="bio"></textarea>
+        </fieldset>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+
+</html>
