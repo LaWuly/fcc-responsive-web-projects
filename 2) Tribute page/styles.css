@@ -1,0 +1,139 @@
+body {
+    background-color: #E8E3D4;
+    color: #2E2C29;
+    font-family: 'Arial', sans-serif;
+    margin: auto;
+    padding: 0;
+    max-width: 1000px;
+}
+
+#image  {
+    max-width: 100%;
+    height: auto;
+}
+.hidden {
+    display: none;
+     }
+
+img {
+    display: block;
+}
+
+@media (min-width: 768px) {
+    header {
+        background-color: #C4B8A4;
+        display: flex;
+        align-items: center;
+        padding: 15px;
+        align-content: space-around
+    }
+
+    #image {
+        object-fit: cover;
+        background-color: #2E2C29;
+        aspect-ratio: 4/5;
+        border-radius: 30%;
+        max-height: 350px;
+        min-width: 80px;
+        border: 2px solid #2E2C29;
+        transform: scaleX(-1);
+        margin:auto;
+    }
+
+}
+
+@media (max-width: 767px) {
+    header {
+        background-color: #C4B8A4;
+        padding: 15px;
+    }
+
+    #image {
+        object-fit: cover;
+        background-color: #2E2C29;
+        aspect-ratio: 4/5;
+        border-radius: 30%;
+        max-height: 350px;
+        transform: scaleX(-1);
+        min-width: 80px;
+        border: 2px solid #2E2C29;
+        margin: 0 auto;
+    }
+
+}
+
+
+h1 {
+    color: #272322;
+    text-align: center;
+    margin-top: 20px;
+}
+
+h2,
+h3 {
+    color: #4D4A46;
+}
+
+em {
+    color: #6A5F51;
+    text-align: center;
+    display: block;
+    margin-bottom: 20px;
+}
+
+
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+
+#boltzmann-fig {
+    max-width: 100%;
+    display: block;
+    margin: auto;
+}
+
+
+q {
+    font-style: italic;
+    display: block;
+    margin: 20px auto;
+    color: #4D4A46;
+    text-align: center;
+}
+
+
+section {
+    margin-bottom: 40px;
+}
+
+
+ul {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+
+footer {
+    text-align: center;
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #C4B8A4;
+    color: #2E2C29;
+}
+
+footer a {
+    color: #56727D;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #4A6573;
+    text-decoration: underline;
+}

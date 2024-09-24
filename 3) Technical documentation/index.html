@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HTML & CSS</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <nav id="navbar">
+    <header>HTML & CSS</header>
+    <ul>
+      <li><a class="nav-link" href="#Introduction_to_HTML_and_CSS">Introduction to HTML and CSS</a></li>
+      <li><a class="nav-link" href="#HTML">HTML</a></li>
+      <li><a class="nav-link" href="#CSS">CSS</a></li>
+      <li><a class="nav-link" href="#Practical_Examples">Practical Examples</a></li>
+      <li><a class="nav-link" href="#Best_Practices">Best Practices</a></li>
+    </ul>
+  </nav>
+  <main id="main-doc">
+    <h1>brief notes about HTML & CSS</h1>
+    <section id="Introduction_to_HTML_and_CSS" class="main-section">
+      <header>Introduction to HTML and CSS</header>
+
+      <h2>What is HTML (HyperText Markup Language)</h2>
+      <p>HTML (HyperText Markup Language) is the markup language used to create the basic structure of web pages. It
+        consists of a series of elements that define the content of a page, like headings, paragraphs, images, links,
+        and more. Each element is enclosed in tags, which tell the browser how to display the content.</p>
+      <pre><code>
+          &lt;h1&gt;This is a heading&lt;/h1&gt;
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            </code></pre>
+      <p>HTML elements dont define the style of the content, only its structure. The goal of HTML is to provide clear
+        semantics, useful for search engines and users, especially those using assistive technologies.</p>
+
+      <h2>What is CSS (Cascading Style Sheets)</h2>
+      <p>CSS (Cascading Style Sheets) is the language used to define the style of an HTML document. CSS allows control
+        over the appearance of elements on the page, such as colors, fonts, layout, and spacing. This separates
+        structure (HTML) from style, making it easier to update or modify a website's look without altering its
+        structure.</p>
+      <pre><code>
+          h1 {
+            color: blue;
+            font-size: 36px;
+          }
+          p {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+          }
+            </code></pre>
+      <p>CSS also enables the creation of complex layouts and responsive websites, which adapt to various screen sizes.
+      </p>
+
+      <h2>Difference between HTML and CSS</h2>
+      <p>HTML and CSS work together to create web pages, but serve different purposes:</p>
+      <ul>
+        <li><strong>HTML</strong> handles the structure and content of the page. It's like the skeleton of a building,
+          providing a strong foundation.</li>
+        <li><strong>CSS</strong> manages the style and aesthetic appearance of the page. It's like decoration and
+          furnishing, making the site visually appealing and easy to navigate.</li>
+      </ul>
+
+      <h2>How they work together</h2>
+      <p>To see HTML and CSS in action, consider this example of a web page using both:</p>
+      <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Sample Page&lt;/title&gt;
+              &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;h1&gt;Welcome to my site!&lt;/h1&gt;
+              &lt;p&gt;This is a simple example of how HTML and CSS work together.&lt;/p&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+            </code></pre>
+
+      <p>In the CSS file (<code>styles.css</code>), we might have something like:</p>
+      <pre><code>
+          body {
+            background-color: #f0f0f0;
+          }
+
+          h1 {
+            color: darkblue;
+            text-align: center;
+          }
+
+          p {
+            font-size: 18px;
+            color: #333;
+          }
+            </code></pre>
+
+      <p>This way, we can modify the appearance of the page without touching the HTML file, making website maintenance
+        simpler and more efficient.</p>
+    </section>
+
+    <section id="HTML" class="main-section">
+      <header>HTML</header>
+
+      <h2>2.1 Basic Structure of an HTML Document</h2>
+      <p>A basic HTML document follows a specific structure that tells the browser how to interpret the content. Heres
+        the minimum structure of an HTML file:</p>
+      <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Page Title&lt;/title&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;!-- Page content goes here --&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+            </code></pre>
+
+      <ul>
+        <li><strong>&lt;!DOCTYPE html&gt;</strong>: Specifies the document type (HTML5).</li>
+        <li><strong>&lt;html&gt;</strong>: The root element that contains the entire page content.</li>
+        <li><strong>&lt;head&gt;</strong>: Contains meta-information about the page (e.g., charset, viewport, title).
+        </li>
+        <li><strong>&lt;body&gt;</strong>: Contains the visible content of the page.</li>
+      </ul>
+
+      <h2>2.2 Common HTML Tags</h2>
+      <p>Below is a list of the most common HTML tags used to create the content of a webpage:</p>
+
+      <h3>Headings</h3>
+      <p>Headings hierarchically define the page content:</p>
+      <pre><code>
+          &lt;h1&gt;Main Heading&lt;/h1&gt;
+          &lt;h2&gt;Second Heading&lt;/h2&gt;
+          &lt;h3&gt;Third Heading&lt;/h3&gt;
+            </code></pre>
+
+      <h3>Paragraphs</h3>
+      <p>For defining blocks of text:</p>
+      <pre><code>
+          &lt;p&gt;This is a paragraph.&lt;/p&gt;
+            </code></pre>
+
+      <h3>Images</h3>
+      <p>Images are inserted using the <code>&lt;img&gt;</code> tag and require the <code>src</code> (source) attribute
+        to specify the image file:</p>
+      <pre><code>
+          &lt;img src="image.jpg" alt="Image description"&gt;
+            </code></pre>
+
+      <h3>Links</h3>
+      <p>For creating hyperlinks, use the <code>&lt;a&gt;</code> tag with the <code>href</code> attribute that specifies
+        the link destination:</p>
+      <pre><code>
+          &lt;a href="https://www.example.com"&gt;Visit the site&lt;/a&gt;
+            </code></pre>
+
+      <h3>Lists</h3>
+      <p>Lists can be ordered (<code>&lt;ol&gt;</code>) or unordered (<code>&lt;ul&gt;</code>):</p>
+      <pre><code>
+          &lt;ul&gt;
+            &lt;li&gt;Item 1&lt;/li&gt;
+            &lt;li&gt;Item 2&lt;/li&gt;
+          &lt;/ul&gt;
+
+          &lt;ol&gt;
+            &lt;li&gt;First Item&lt;/li&gt;
+            &lt;li&gt;Second Item&lt;/li&gt;
+          &lt;/ol&gt;
+            </code></pre>
+
+      <h3>Tables</h3>
+      <p>Tables are created using the <code>&lt;table&gt;</code>, <code>&lt;tr&gt;</code> (row), <code>&lt;td&gt;</code>
+        (cell), and <code>&lt;th&gt;</code> (header):</p>
+      <pre><code>
+          &lt;table&gt;
+            &lt;tr&gt;
+              &lt;th&gt;Header 1&lt;/th&gt;
+              &lt;th&gt;Header 2&lt;/th&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+              &lt;td&gt;Cell 1&lt;/td&gt;
+              &lt;td&gt;Cell 2&lt;/td&gt;
+            &lt;/tr&gt;
+          &lt;/table&gt;
+            </code></pre>
+
+      <h3>Forms</h3>
+      <p>Forms allow users to submit data through inputs such as text fields and buttons:</p>
+      <pre><code>
+          &lt;form action="process.php" method="post"&gt;
+            &lt;input type="text" name="name" placeholder="Enter your name"&gt;
+            &lt;button type="submit"&gt;Submit&lt;/button&gt;
+          &lt;/form&gt;
+            </code></pre>
+
+      <h3>Divisions and Sections</h3>
+      <p>The <code>&lt;div&gt;</code> tag is used for grouping content and has no semantic meaning, while tags like
+        <code>&lt;section&gt;</code> or <code>&lt;article&gt;</code> are used to create sections of semantic content:
+      </p>
+      <pre><code>
+          &lt;div&gt;
+            This is a div.
+          &lt;/div&gt;
+
+          &lt;section&gt;
+            This is a section of content.
+          &lt;/section&gt;
+            </code></pre>
+      <h2>2.3 HTML Attributes</h2>
+      <p>Attributes provide additional information about HTML elements. They are placed within the opening tag and add
+        extra characteristics to the element.</p>
+      <ul>
+        <li><strong>id</strong>: A unique identifier for an HTML element.</li>
+        <li><strong>class</strong>: Assigns one or more classes to an element, useful for applying CSS styles or
+          referencing the element in JavaScript.</li>
+        <li><strong>style</strong>: Applies inline CSS styles directly to the element.</li>
+        <li><strong>src</strong>: Used to specify the source of an image (<code>&lt;img&gt;</code>) or a script
+          (<code>&lt;script&gt;</code>).</li>
+        <li><strong>href</strong>: Used with the <code>&lt;a&gt;</code> tag to specify the destination of a link.</li>
+      </ul>
+
+      <h2>2.4 HTML Semantics</h2>
+      <p>Using semantic tags makes HTML code clearer, both for search engines and for users who use assistive
+        technologies. Semantic tags give meaning to content, improving accessibility and SEO (Search Engine
+        Optimization).</p>
+      <ul>
+        <li><strong>&lt;header&gt;</strong>: Defines the header of a page or section.</li>
+        <li><strong>&lt;footer&gt;</strong>: Defines the footer of a page or section.</li>
+        <li><strong>&lt;nav&gt;</strong>: Defines a section containing navigation links.</li>
+        <li><strong>&lt;main&gt;</strong>: Defines the main content of a document.</li>
+        <li><strong>&lt;article&gt;</strong>: Defines an article, which can stand on its own from the rest of the page.
+        </li>
+        <li><strong>&lt;section&gt;</strong>: Defines a general section of a document.</li>
+        <li><strong>&lt;aside&gt;</strong>: Contains secondary content, like a sidebar or related information.</li>
+      </ul>
+    </section>
+
+    <section id="CSS" class="main-section">
+      <header>CSS</header>
+
+      <h2>3.1 Introduction to CSS</h2>
+      <p>CSS (Cascading Style Sheets) is the language used to define the style of an HTML document. It controls the
+        visual appearance of a website, including colors, fonts, layout, and more. CSS separates the content structure
+        (HTML) from its presentation, making site management and maintenance easier.</p>
+      <p>An example of a CSS rule that applies styling to a heading and a paragraph:</p>
+      <pre><code>
+          h1 {
+            color: blue;
+            font-size: 36px;
+          }
+          p {
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+          }
+            </code></pre>
+      <p>You can link an external CSS file to the HTML document using the <code>&lt;link&gt;</code> tag in the
+        <code>&lt;head&gt;</code> section of the HTML file:</p>
+      <pre><code>
+          &lt;link rel="stylesheet" href="styles.css"&gt;
+            </code></pre>
+
+      <h2>3.2 CSS Selectors</h2>
+      <p>Selectors in CSS allow you to specify which HTML elements should be styled. There are several types of
+        selectors:</p>
+
+      <h3>Simple Selectors</h3>
+      <ul>
+        <li><strong>Type selector</strong>: Selects all elements of a specific type. Example:
+          <pre><code>
+          p {
+            color: red;
+          }
+                </code></pre>
+          This applies red color to all <code>&lt;p&gt;</code> elements.
+        </li>
+        <li><strong>Class selector</strong>: Selects all elements with a specific class. It uses a period <code>.</code>
+          before the class name:
+          <pre><code>
+          .header {
+            font-size: 24px;
+            color: green;
+          }
+                </code></pre>
+          This applies styles to all elements with the class <code>header</code>.
+        </li>
+        <li><strong>ID selector</strong>: Selects the element with a specific ID. It uses a hash <code>#</code> before
+          the ID name:
+          <pre><code>
+          #container {
+            padding: 20px;
+            background-color: lightgray;
+          }
+                </code></pre>
+          This applies styles to the element with the ID <code>container</code>.
+        </li>
+      </ul>
+
+      <h3>Combined Selectors</h3>
+      <ul>
+        <li><strong>Group selectors</strong>: Selects multiple elements and applies the same style to them:
+          <pre><code>
+          h1, h2, h3 {
+            color: navy;
+          }
+                </code></pre>
+        </li>
+        <li><strong>Descendant selector</strong>: Selects elements that are descendants of another element:
+          <pre><code>
+          div p {
+            font-size: 18px;
+          }
+                </code></pre>
+          This applies the style to all <code>&lt;p&gt;</code> elements inside a <code>&lt;div&gt;</code>.
+        </li>
+      </ul>
+
+      <h3>Pseudo-classes and Pseudo-elements</h3>
+      <p>Pseudo-classes and pseudo-elements allow you to style elements based on a particular state or part of the
+        content:</p>
+      <ul>
+        <li><strong>Pseudo-class</strong> <code>:hover</code>: Applies styles when the user hovers over an element:
+          <pre><code>
+          a:hover {
+            color: red;
+          }
+                </code></pre>
+        </li>
+        <li><strong>Pseudo-element</strong> <code>::before</code>: Inserts content before an element:
+          <pre><code>
+          h1::before {
+            content: "🎉 ";
+          }
+                </code></pre>
+        </li>
+      </ul>
+
+      <h2>3.3 Box Model</h2>
+      <p>The box model in CSS describes how every HTML element is a rectangular box made up of four areas: content,
+        padding, border, and margin.</p>
+      <img src="https://upload.wikimedia.org/wikipedia/commons/7/7a/Boxmodell-detail.png" alt="CSS Box Model">
+      <ul>
+        <li><strong>Content</strong>: The area that contains the actual content of the element.</li>
+        <li><strong>Padding</strong>: The space between the content and the border.</li>
+        <li><strong>Border</strong>: The line that surrounds the element.</li>
+        <li><strong>Margin</strong>: The outer space that separates the element from others.</li>
+      </ul>
+
+      <p>Example of CSS rules that define the box model:</p>
+      <pre><code>
+          div {
+            width: 200px;
+            padding: 10px;
+            border: 2px solid black;
+            margin: 20px;
+          }
+            </code></pre>
+
+      <h2>3.4 Layout with CSS</h2>
+      <p>CSS allows you to manage the layout of the page using various properties. The most commonly used layouts
+        include <strong>Flexbox</strong> and <strong>Grid</strong>.</p>
+
+      <h3>Display</h3>
+      <p>The display of an element determines how it is rendered. Common values include:</p>
+      <ul>
+        <li><strong>block</strong>: The element occupies the entire available width.</li>
+        <li><strong>inline</strong>: The element only takes up the space needed and does not break the text flow.</li>
+        <li><strong>inline-block</strong>: The element behaves like an inline element but allows setting dimensions.
+        </li>
+        <li><strong>none</strong>: The element is not displayed.</li>
+      </ul>
+
+      <h3>Flexbox</h3>
+      <p>Flexbox is a layout model that allows flexible and centered positioning of elements. Heres an example of a
+        layout using Flexbox:</p>
+      <pre><code>
+          .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+          }
+            </code></pre>
+
+      <h3>Grid</h3>
+      <p>The CSS Grid Layout allows you to create complex grid-based layouts. Heres an example of a basic layout with
+        Grid:</p>
+      <pre><code>
+          .container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 20px;
+          }
+            </code></pre>
+
+      <h2>3.5 Colors and Measurement Units</h2>
+      <p>CSS supports various methods to specify colors:</p>
+      <ul>
+        <li><strong>RGB</strong>: <code>rgb(255, 0, 0)</code></li>
+        <li><strong>HEX</strong>: <code>#ff0000</code></li>
+        <li><strong>HSL</strong>: <code>hsl(0, 100%, 50%)</code></li>
+      </ul>
+
+      <p>The most common measurement units include:</p>
+      <ul>
+        <li><strong>px</strong>: Pixels, a fixed unit.</li>
+        <li><strong>%</strong>: A percentage relative to the container's size.</li>
+        <li><strong>em</strong> and <strong>rem</strong>: Units relative to the font size.</li>
+        <li><strong>vh</strong> and <strong>vw</strong>: Units relative to the viewport's height and width.</li>
+      </ul>
+
+      <h2>3.6 Text Styling</h2>
+      <p>CSS allows you to control the appearance of text, including fonts, sizes, spacing, and alignment.</p>
+      <pre><code>
+          h1 {
+            font-family: 'Arial', sans-serif;
+            font-size: 36px;
+            color: darkblue;
+            text-align: center;
+          }
+          p {
+            line-height: 1.6;
+            letter-spacing: 0.5px;
+          }
+            </code></pre>
+
+      <h2>3.7 Responsive Design</h2>
+      <p>Responsive design enables you to create layouts that adapt to different screen sizes using <strong>media
+          queries</strong> and relative units like <code>%</code>, <code>vh</code>, and <code>vw</code>.</p>
+
+      <p>An example of a media query for smaller screens:</p>
+      <pre><code>
+          @media (max-width: 600px) {
+            body {
+              font-size: 14px;
+            }
+          }
+            </code></pre>
+
+      <p>Mobile-first design focuses on optimizing for mobile devices first, then expanding the layout for larger
+        screens.</p>
+    </section>
+
+    <section id="Practical_Examples" class="main-section">
+      <header>Practical Examples</header>
+
+      <h2>4.1 Creating a Simple HTML Page with CSS Styles</h2>
+      <p>Below is an example of a simple HTML page with external CSS styles controlling the text and layout appearance.
+      </p>
+
+      <h3>HTML</h3>
+      <pre><code>
+          &lt;!DOCTYPE html&gt;
+          &lt;html lang="en"&gt;
+            &lt;head&gt;
+              &lt;meta charset="UTF-8"&gt;
+              &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+              &lt;title&gt;Simple Page&lt;/title&gt;
+              &lt;link rel="stylesheet" href="styles.css"&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+              &lt;header&gt;
+                &lt;h1&gt;Welcome to my site&lt;/h1&gt;
+              &lt;/header&gt;
+              &lt;section&gt;
+                &lt;p&gt;This is a simple page with external CSS styles.&lt;/p&gt;
+              &lt;/section&gt;
+              &lt;footer&gt;
+                &lt;p&gt;Created by me&lt;/p&gt;
+              &lt;/footer&gt;
+            &lt;/body&gt;
+          &lt;/html&gt;
+            </code></pre>
+
+      <h3>CSS</h3>
+      <pre><code>
+          body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+            margin: 0;
+            padding: 0;
+          }
+
+          header {
+            background-color: #4CAF50;
+            color: white;
+            text-align: center;
+            padding: 1em;
+          }
+
+          section {
+            margin: 20px;
+          }
+
+          footer {
+            text-align: center;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+          }
+            </code></pre>
+      <h2>4.2 Examples of Layouts with Flexbox and Grid</h2>
+
+      <h3>Flexbox Layout</h3>
+      <p>Below is an example of a column layout using Flexbox:</p>
+      <pre><code>
+                      .container {
+                        display: flex;
+                        justify-content: space-between;
+                        padding: 20px;
+                      }
+            
+                      .box {
+                        width: 30%;
+                        background-color: #4CAF50;
+                        padding: 20px;
+                        color: white;
+                        text-align: center;
+                      }
+                        </code></pre>
+      <p>Here is how the containers would look:</p>
+      <div class="container">
+        <div class="box">Box 1</div>
+        <div class="box">Box 2</div>
+        <div class="box">Box 3</div>
+      </div>
+
+      <h3>Grid Layout</h3>
+      <p>An example of a layout with CSS Grid, which divides a page into two columns and rows:</p>
+      <pre><code>
+                      .container {
+                        display: grid;
+                        grid-template-columns: 1fr 1fr;
+                        grid-gap: 20px;
+                      }
+            
+                      .item {
+                        background-color: #4CAF50;
+                        padding: 20px;
+                        color: white;
+                        text-align: center;
+                      }
+                        </code></pre>
+
+      <div class="container">
+        <div class="item">Item 1</div>
+        <div class="item">Item 2</div>
+        <div class="item">Item 3</div>
+        <div class="item">Item 4</div>
+      </div>
+
+      <h2>4.3 Formatting Text and Images</h2>
+      <p>Heres an example of how to format text and images with CSS:</p>
+      <pre><code>
+                      p {
+                        font-size: 18px;
+                        color: #333;
+                        line-height: 1.6;
+                      }
+            
+                      img {
+                        max-width: 100%;
+                        height: auto;
+                        border-radius: 10px;
+                      }
+                        </code></pre>
+      <p>This ensures that images adapt to the container and the text is easily readable.</p>
+
+      <h2>4.4 Creating a Responsive Navigation Menu</h2>
+      <p>Heres an example of a simple navigation menu that becomes responsive using media queries:</p>
+
+      <h3>HTML</h3>
+      <pre><code>
+                      &lt;nav&gt;
+                        &lt;ul&gt;
+                          &lt;li&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="#"&gt;About Us&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="#"&gt;Services&lt;/a&gt;&lt;/li&gt;
+                          &lt;li&gt;&lt;a href="#"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                      &lt;/nav&gt;
+                        </code></pre>
+
+      <h3>CSS</h3>
+      <pre><code>
+                      nav ul {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        background-color: #333;
+                      }
+            
+                      nav ul li {
+                        display: inline-block;
+                        margin-right: 20px;
+                      }
+            
+                      nav ul li a {
+                        color: white;
+                        text-decoration: none;
+                        padding: 10px;
+                        display: block;
+                      }
+            
+                      @media (max-width: 600px) {
+                        nav ul li {
+                          display: block;
+                          margin-right: 0;
+                        }
+                      }
+                        </code></pre>
+      <p>With these rules, the menu automatically adjusts to smaller screens.</p>
+    </section>
+
+    <section id="Best_Practices" class="main-section">
+      <header>Best Practices</header>
+
+      <h2>5.1 Separating Structure and Style</h2>
+      <p>It is good practice to keep HTML and CSS separate. HTML should define the structure and content, while CSS
+        should handle styling. This approach makes the code easier to maintain and modify over time.</p>
+      <pre><code>
+                      &lt;!-- HTML: structure --&gt;
+                      &lt;p class="description"&gt;This is a paragraph.&lt;/p&gt;
+            
+                      &lt;!-- CSS: style --&gt;
+                      .description {
+                        font-size: 18px;
+                        color: #333;
+                      }
+                        </code></pre>
+
+      <h2>5.2 Using Meaningful Class and ID Names</h2>
+      <p>Use descriptive class and ID names to make the code more readable and easier to understand. Avoid generic names
+        like <code>div1</code> or <code>box2</code> and prefer names that describe the elements function.</p>
+      <pre><code>
+                      &lt;div class="article-content"&gt;...&lt;/div&gt;
+                        </code></pre>
+
+      <h2>5.3 Avoid Inline Styles</h2>
+      <p>Avoid using inline styles (directly in HTML elements) as it makes the code hard to manage. Instead, use
+        external CSS files or style rules in the <code>&lt;head&gt;</code> section.</p>
+      <pre><code>
+                      &lt;!-- Avoid this --&gt;
+                      &lt;p style="color: red;"&gt;Red text&lt;/p&gt;
+            
+                      &lt;!-- Use this --&gt;
+                      &lt;p class="red-text"&gt;Red text&lt;/p&gt;
+                        </code></pre>
+
+      <h2>5.4 Commenting Your Code</h2>
+      <p>Adding comments in both HTML and CSS helps keep the code organized and easier to understand for you or other
+        developers. Heres an example:</p>
+      <pre><code>
+                      &lt;!-- This is an HTML comment --&gt;
+                      &lt;p&gt;Page content&lt;/p&gt;
+            
+                      /* This is a CSS comment */
+                      p {
+                        color: #333;
+                      }
+                        </code></pre>
+
+      <h2>5.5 Using the Box Model Correctly</h2>
+      <p>Always set <code>box-sizing</code> to <code>border-box</code> to avoid confusion regarding the size of
+        elements. This ensures that padding and borders are included in the element's size.</p>
+      <pre><code>
+                      * {
+                        box-sizing: border-box;
+                      }
+                        </code></pre>
+
+      <h2>5.6 Optimizing for Performance</h2>
+      <p>Optimize your sites performance by reducing image sizes, compressing CSS and JavaScript files, and minimizing
+        the number of HTTP requests.</p>
+
+      <h3>Using Optimized Images</h3>
+      <p>Ensure images are saved in the correct format and at an appropriate resolution. For example, use formats like
+        WebP to reduce file sizes without compromising quality.</p>
+
+      <h3>Minimizing CSS and JS Files</h3>
+      <p>Use tools like <code>cssnano</code> or <code>UglifyJS</code> to reduce the size of your CSS and JavaScript
+        files, improving the loading time of your site.</p>
+    </section>
+  </main>
+</body>
+
+</html>
